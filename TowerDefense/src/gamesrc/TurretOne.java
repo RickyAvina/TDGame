@@ -12,7 +12,7 @@ public class TurretOne extends Turret {
 
 	@Override
 	public Bullet createBullet() {
-		return new Bullet(ImageCache.getImage("bullet.png"));
+		return new Bullet(ImageCache.getImage("CallOfDuty.png"));
 	}
 
 	@Override

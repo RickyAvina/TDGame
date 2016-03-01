@@ -1,5 +1,7 @@
 package gamesrc;
 
+import java.awt.image.BufferedImage;
+
 import jgame.ButtonState;
 import jgame.Context;
 import jgame.GButton;
@@ -18,10 +20,14 @@ public class TGMenuView extends GContainer {
 
 		MenuBackground mbg = new MenuBackground();
 		addAtCenter(mbg);
-
-		GSprite none_img = new GSprite(ImageCache.getImage("/none_img.png"));
-		GSprite hover_img = new GSprite(ImageCache.getImage("/hover_img.png"));
-		GSprite pressed_img = new GSprite(ImageCache.getImage("/pressed_img.png"));
+		
+		BufferedImage none = ImageCache.getImage("/none.png");
+		BufferedImage hover = ImageCache.getImage("/hover.png");
+		BufferedImage pressed = ImageCache.getImage("/pressed.png");
+		
+		GSprite none_img = new GSprite(none.getScaledInstance(100, 100, 0));
+		GSprite hover_img = new GSprite(hover.getScaledInstance(100, 100, 0));
+		GSprite pressed_img = new GSprite(pressed.getScaledInstance(100, 100, 0));
 
 		GButton play_btn = new GButton();
 		play_btn.setStateSprite(ButtonState.NONE, none_img);

@@ -21,7 +21,8 @@ public class menuArea extends GContainer {
 	List <Image> tileImages = ImageCache.getSequentialImages("d", 1, 5, ".png");
 	
 	private void setTile(int i){
-		Tile tile = new Tile(tileImages.get(i),  i);
+		Image x = tileImages.get(i);
+		Tile tile = new Tile(x.getScaledInstance(75, 75, 0),  i);
 		tile.setAnchorTopLeft();
 		tile.setScale(0.9);
 		tile.setX(4);

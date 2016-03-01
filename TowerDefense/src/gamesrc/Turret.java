@@ -16,7 +16,7 @@ public abstract class Turret extends GSprite {
 
 			@Override
 			public void invoke(GObject target, Context context) {
-				target.face(400, 300);
+				target.face(TGLevelOneView.spawnEnemy().getX(), TGLevelOneView.spawnEnemy().getX());
 				target.setRotation(target.getRotation());
 				fireBullet();
 			}
